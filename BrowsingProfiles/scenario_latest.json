@@ -1,7 +1,7 @@
 [
     {
         "ScenarioName": "AmazonSearch",
-        "Duration": 50,
+        "Duration": 60,
         "Interactions": [
             {
                 "Type": "WebDriverHelper",
@@ -63,7 +63,7 @@
             {
                 "Type": "WebDriverHelper",
                 "Method": "ScrollPage",
-                "Args": [ 10 ]
+                "Args": [ 10, 1000 ]
             }
         ]
     },
@@ -71,6 +71,10 @@
         "ScenarioName": "BbcNews",
         "Duration": 60,
         "Interactions": [
+            {
+                "Type": "WebDriverHelper",
+                "Method": "CreateNewTab"
+            },
             {
                 "Type": "WebDriverHelper",
                 "Method": "NavigateToUrl",
@@ -94,7 +98,7 @@
             {
                 "Type": "WebDriverHelper",
                 "Method": "ScrollPage",
-                "Args": [ 2 ]
+                "Args": [ 2, 2000 ]
             },
             {
                 "Type": "WebDriverHelper",
@@ -104,7 +108,7 @@
             {
                 "Type": "WebDriverHelper",
                 "Method": "ScrollPage",
-                "Args": [ 2 ]
+                "Args": [ 2, 2000 ]
             }
         ]
     },
@@ -112,6 +116,10 @@
         "ScenarioName": "EspnHomepage",
         "Duration": 60,
         "Interactions": [
+            {
+                "Type": "WebDriverHelper",
+                "Method": "CreateNewTab"
+            },
             {
                 "Type": "WebDriverHelper",
                 "Method": "NavigateToUrl",
@@ -125,7 +133,7 @@
             {
                 "Type": "WebDriverHelper",
                 "Method": "ScrollPage",
-                "Args": [ 20 ]
+                "Args": [ 20, 2000 ]
             }
         ]
     },
@@ -133,6 +141,10 @@
         "ScenarioName": "FacebookNewsfeedScroll",
         "Duration": 60,
         "Interactions": [
+            {
+                "Type": "WebDriverHelper",
+                "Method": "CreateNewTab"
+            },
             {
                 "Type": "WebDriverHelper",
                 "Method": "NavigateToUrl",
@@ -154,17 +166,6 @@
                 "Args": [ 2 ]
             },
             {
-                "Type": "RemoteWebDriver",
-                "Method": "FindElementById",
-                "Args": [ "expanding_cta_close_button" ]
-            },
-            {
-                "Type": "WebDriverHelper",
-                "Method": "ClickElement",
-                "UseLastReturnObject": true,
-                "Args": [ 10 ]
-            },
-            {
                 "Type": "WebDriverHelper",
                 "Method": "Wait",
                 "Args": [ 2 ]
@@ -172,7 +173,7 @@
             {
                 "Type": "WebDriverHelper",
                 "Method": "ScrollPage",
-                "Args": [ 10 ]
+                "Args": [ 10, 1500 ]
             }
         ]
     },
@@ -182,13 +183,18 @@
         "Interactions": [
             {
                 "Type": "WebDriverHelper",
+                "Method": "NextTab",
+                "Args": [ false ]
+            },
+            {
+                "Type": "WebDriverHelper",
                 "Method": "NavigateToUrl",
                 "Args": [ "https://www.instagram.com/msft_power" ]
             },
             {
                 "Type": "WebDriverHelper",
                 "Method": "ScrollPage",
-                "Args": [ 10 ]
+                "Args": [ 10, 1500 ]
             }
         ]
     },
@@ -196,6 +202,11 @@
         "ScenarioName": "TumblrTrending",
         "Duration": 60,
         "Interactions": [
+            {
+                "Type": "WebDriverHelper",
+                "Method": "NextTab",
+                "Args": [ false ]
+            },
             {
                 "Type": "WebDriverHelper",
                 "Method": "NavigateToUrl",
@@ -236,7 +247,7 @@
             {
                 "Type": "WebDriverHelper",
                 "Method": "ScrollPage",
-                "Args": [ 20 ]
+                "Args": [ 20, 1000 ]
             }
 
         ]
@@ -245,6 +256,11 @@
         "ScenarioName": "YoutubeWatchVideoToS",
         "Duration": 180,
         "Interactions": [
+            {
+                "Type": "WebDriverHelper",
+                "Method": "NextTab",
+                "Args": [ true ]
+            },
             {
                 "Type": "WebDriverHelper",
                 "Method": "NavigateToUrl",
@@ -284,6 +300,11 @@
         "Interactions": [
             {
                 "Type": "WebDriverHelper",
+                "Method": "NextTab",
+                "Args": [ false ]
+            },
+            {
+                "Type": "WebDriverHelper",
                 "Method": "NavigateToUrl",
                 "Args": [ "https://en.wikipedia.org/wiki/United_States" ]
             },
@@ -295,7 +316,7 @@
             {
                 "Type": "WebDriverHelper",
                 "Method": "ScrollPage",
-                "Args": [ 12 ]
+                "Args": [ 12, 2000 ]
             }
         ]
     },
@@ -305,7 +326,8 @@
         "Interactions": [
             {
                 "Type": "WebDriverHelper",
-                "Method": "CreateNewTab"
+                "Method": "NextTab",
+                "Args": [ false ]
             },
             {
                 "Type": "WebDriverHelper",
@@ -315,7 +337,7 @@
             {
                 "Type": "WebDriverHelper",
                 "Method": "ScrollPage",
-                "Args": [ 16 ]
+                "Args": [ 16, 1500 ]
             }
         ]
     }
